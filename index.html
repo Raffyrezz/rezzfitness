@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/w3.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RezzFitnessConsept</title>
+</head>
+<style>
+    .imgslide{
+        background-position: center center ;
+        background-size: cover;
+        width: 100%;
+    }
+</style>
+    <body class="w3-white>
+    <div class="w3-container">
+        <center>
+        <img src="css/Banner2.jpg" alt="" width="100%">
+        </center>
+    </div>
+
+        <div class="w3-bar w3-black w3-card-4 w3-col w3-right">
+            <button class="w3-bar-item w3-button" onclick="openBar('Home')">Home</button>
+    
+                <div class="w3-dropdown-hover">
+                    <button class="w3-button">Metode</button>
+                        <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-black">
+                            <button class="w3-bar-item w3-button" onclick="openBar('Bulking')">Bulking</button>
+                            <button class="w3-bar-item w3-button" onclick="openBar('Cutting')">Cutting</button>
+                            
+                        </div>
+                </div>
+    
+                <div class="w3-dropdown-hover">
+                    <button class="w3-button">Exercise</button>
+                        <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-black">
+                            <button class="w3-bar-item w3-button" onclick="openBar('Chest')">Chest</button>
+                            <button class="w3-bar-item w3-button" onclick="openBar('Back')">Back</button>
+                            <button class="w3-bar-item w3-button" onclick="openBar('Shoulder')">Shoulder</button>
+                            <button class="w3-bar-item w3-button" onclick="openBar('Leg')">Leg</button>
+                        </div>
+                </div>
+    
+                <div class="w3-dropdown-hover">
+                    <button class="w3-button">Calculator</button>
+                        <div class="w3-dropdown-content w3-bar-block w3-card-4 w3-black">
+                            <button class="w3-bar-item w3-button" onclick="openBar('Calorie')">Calorie</button>
+                            <button class="w3-bar-item w3-button" onclick="openBar('BMI')">BMI</button>
+                        </div>
+                </div>
+                <button class="w3-bar-item w3-button" onclick="openBar('Profile')">Profile</button>
+        </div>
+    
+        <div id="Home" class="slideshow-w3-container show" style="display: block;">
+            <div class="myslide" style="background-size: cover;">
+                <img class="imgslide" src="css/invictus go _ Almaty _ gym zone _ 2022.jpeg">
+            </div>
+            <div class="myslide">
+                <img class="imgslide" src="css/DAS GYM - Das beste GYM der Welt - Intelligent Strength.jpeg">
+            </div>
+            <div class="myslide">
+                <img class="imgslide" src="css/On Air CARRÉ SENART.jpeg">
+            </div>
+            <div class="myslide">
+                <img class="imgslide" src="css/30평40평 소형 PT 피티샵인테리어 공사완료 - 사무실인테리어 디자인 공사 비용견적 플랫폼.jpeg">
+            </div>
+        </div>
+        <form name="form1">
+            <div id="Calorie" class="w3-container show" style="display:none">
+        
+        <div class="w3-container">
+            <div class="panel w3-black">
+            <center>
+            <h1>CALORIE CALCULATOR
+            </div>
+        </div>
+        
+        <div class="w3-panel w3-gray w3-card4">
+            <p>
+                <center>
+                    <table>
+                        <tr><td>Umur<td><input name="umur" type="text">
+                        <tr><td>Gender <td><select class="w3-select" name="gender">
+                            <option>Male
+                            <option>Female
+                            </option>
+                        </select>
+                        <tr><td>Berat Badan (kg)<td><input name="beratCal" type="text">
+                        <tr><td>Tinggi Badan (cm)<td><input name="tinggiCal" type="text">
+                        <tr><td colspan=2><hr> 
+                        <tr><td>Jumlah Kalori Anda<td><input name="kalori" type="text">
+                        
+                    </table>
+                </center>
+            </p>
+        </div>
+            <div class="w3-panel w3-black">
+            <p>
+            <center>
+                <input type="button" class="w3-btn w3-white" value="Proses" onclick="kaloriKalku()">
+                <input type="button" class="w3-btn w3-white" value="Reset" onclick="reset()">
+            </p>
+            </div>
+            </div>
+            <div id="BMI" class="w3-container show" style="display:none">
+            <script>
+                
+            </script>
+            
+        <div class="w3-container">
+            <div class="panel w3-black">
+            <center>
+            <h1>BMI CALCULATOR
+            </div>
+        </div>
+        
+        <div class="w3-panel w3-gray w3-card4">
+            <p>
+                <center>
+                    <table>
+                        <tr><td>Berat Badan (kg)<td><input class="w3-input" name="beratBMI" type="text">
+                        <tr><td>Tinggi Badan (cm)<td><input class="w3-input" name="tinggiBMI" type="text">
+                        <tr><td colspan=2><hr> 
+                        <tr><td>Indeks Masa Tubuh<td><input name="BMI" type="text">
+                        
+                    </table>
+                </center>
+            </p>
+        </div>
+            <div class="w3-panel w3-black">
+            <p>
+            <center>
+                <input type="button" class="w3-btn w3-white" value="Proses" onclick="bmiKalku()">
+                <input type="button" class="w3-btn w3-white" value="Reset" onclick="reset()">
+            </p>
+            </div>
+        </form>
+        
+    </p>
+    </div>
+    <div id="Bulking" class="w3-panel w3-animate-zoom show" style="display: none;">
+        <h2>
+            Apa itu Bulking?
+        </h2>
+        <img src="css/Muscle Gym Bodybuilding Vector Design Images, Sport Gym Logo Bodybuilder With Big Muscles Posing Isolated Vector Silhouette Front View, Power Clipart, Active, Activity PNG Image For Free Download.jpeg" style="width: 30%;">
+        <p>
+            Bulking adalah strategi yang bertujuan untuk membentuk dan meningkatkan massa otot di dalam tubuh. Pada dasarnya, bulking adalah program diet menambah berat badan yang dilakukan dengan cara menambah asupan kalori melebihi kebutuhan kalori harian tubuh selama periode waktu tertentu. Lalu, setelah mencapai target berat badan, pola makan pada program bulking akan diatur dengan cara menurunkan jumlah asupan kalori secara bertahap.
+        </p>
+        <p>
+            Secara umum, durasi program bulking dapat dilakukan selama kurang lebih 1–6 bulan, tergantung dengan target berat badan dan massa otot yang ingin dicapai. Selama menjalani program bulking, penting pula untuk melakukan latihan fisik atau olahraga secara rutin guna meningkatkan kekuatan otot. Untuk mengetahui jumlah kalori harian anda bisa menggunakan kalkulator kalori yang tertera pada menu.
+        </p>
+    </div>
+    
+    <div id="Cutting" class="w3-panel w3-animate-zoom show" style="display: none;">
+        <h2>
+            Apa Itu Cutting?
+        </h2>
+        <img src="css/Premium Vector _ Food pyramid design nutrition.jpeg" style=" width: 30%;">
+        <p>
+            Program diet cutting adalah sebuah teknik yang populer di dunia kebugaran. Pada dasarnya, program ini adalah sebuah fase di mana seseorang berupaya untuk kurus sesuai target yang dimiliki. ada dua jenis treatment yang dikaitkan dengan program cutting, yaitu diet dan olahraga. cutting diet pada dasarnya dilakukan untuk memangkas lemak yang ada di tubuh.
+            Sementara cutting training adalah sebuah program yang dirancang untuk menjaga otot tetap berkembang meski diet ketat sedang berlangsung.
+        </p>
+        <p>
+            Kedua jenis treatment itu mesti berjalan bersama. Karena, jika hanya melakukan cutting diet, maka massa otot akan ikut berkurang. Sebaliknya, efektivitas cutting training tidak akan optimal jika tidak diimbangi dengan diet yang tepat.
+            Aturan dasar pada diet cutting program adalah memastikan jumlah kalori yang masuk tidak lebih besar dari kalori yang dibakar. Itu sebabnya, perhitungan kalorinya berbeda untuk setiap orang dengan faktornya masing-masing. Yang terpenting adalah menjaga agar asupan protein dan karbohidrat diimbangi dengan aktivitas fisik.
+        </p>
+        <p>
+            Cutting diet juga memiliki waktu program yang berbeda, tergantung seberapa banyak berat yang ingin dikurangi. Semakin banyak maka semakin lama program ini harus diikuti.biasanya, hasil terbaik bisa dirasakan setelah 2 hingga 4 bulan mengombinasikan diet dan olahraga yang tepat. Untuk mengetahui jumlah kalori harian bisa menggunakan kalori kalkulator yang ada di menu.
+        </p>
+    </div>
+    <div id="Chest" class="w3-panel w3-animate-zoom show" style="display: none;">
+        <center>
+
+            <h2>
+                Chest Exercise
+            </h2>
+            <p>
+                1. Push Up
+            </p>
+            <img src="css/Download Push Up Pose Vector  for free.jpeg" style="width: 20%;">
+            <p>
+                2. Bench Press
+            </p>
+            <img src="css/How To_ Wide Grip Bench Press _ Muscles Worked And Benefits.gif" style="width: 20%;">
+            <p>
+                3. Dumbell Chest Press
+            </p>
+            <img src="css/Exercising_ End of the Upper Block Narrow Grip Stock Illustration - Illustration of rear, execution_ 44124246.jpeg" style="width: 20%;">
+    
+        </div>
+        </center>
+    <div id="Back" class="w3-panel w3-animate-zoom show" style="display: none;">
+        <center>
+
+            <h2>
+                Back Exercise
+            </h2>
+            <p>
+                1. Pull Up
+            </p>
+            <img src="css/Exercising_ Reverse Grip Pull-ups on the Back Muscles Stock Illustration - Illustration of pulling, trapezius_ 56929805.jpeg" style="width: 20%;">
+            <p>
+                2. Lats Pulldown
+            </p>
+            <img src="css/fc2eab4d-aaf8-4eda-a314-43ef1a8f90f0.gif" style="width: 20%;">
+            <p>
+                3. Seated Close Grip Row
+            </p>
+            <img src="css/download (1).jpeg" style="width: 20%;">
+    
+        </div>
+        </center>
+    <div id="Shoulder" class="w3-panel w3-animate-zoom show" style="display: none;">
+        <center>
+
+            <h2>
+                Shoulder Exercise
+            </h2>
+            <p>
+                1. Smith Machine Shoulder Press
+            </p>
+            <img src="css/How To Do Smith Machine Shoulder Press _ Exercise Planner.gif" style="width: 20%;">
+            <p>
+                2. Side Lateral Raises
+            </p>
+            <img src="css/dcbca42f7119f8931bb68705f4bd9c6e.jpg" style="width: 20%;">
+            <p>
+                3. Cable reardealt Cross Over
+            </p>
+            <img src="css/Exercising_ Cross Divorces Hands Back To the Lower Stock Illustration - Illustration of middle, divorces_ 44123640.jpeg" style="width: 20%;">
+    
+        </div>
+        </center>
+    </div>
+    <div id="Leg" class="w3-panel w3-animate-zoom show" style="display: none;">
+        <center>
+
+            <h2>
+                Leg Exercise
+            </h2>
+            <p>
+                1. Barbell Squat
+            </p>
+            <img src="css/Barbell squat • uitvoering en uitleg • Men'sPower.gif" style="width: 20%;">
+            <p>
+                2. Leg Press
+            </p>
+            <img src="css/Leg press • uitvoering en uitleg • Men'sPower.gif" style="width: 20%;">
+            <p>
+                3. Bulgarian Barbell
+            </p>
+            <img src="css/Kreuzheben_ Die richtige Ausführung lernen.jpeg" style="width: 20%;">
+    
+        </div>
+        </center>
+    <div id="Profile" class="w3-panel w3-animate-zoom show" style="display: none;">
+        <center>
+
+            <h2>
+                About Me
+            </h2>
+            <img src="css/WhatsApp Image 2024-01-29 at 22.23.29.jpeg" style="width: 30%;">
+            <br>
+                Nama    : Raffy Rahman
+             </br>
+            <br>
+                Kelas   : IF 11
+             </br>
+            <br>
+                NIM     : 10123437
+             </br>
+    
+        </div>
+        </center>
+    </div>
+    
+    </body>
+<script>
+
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("myslide");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}
+      slides[slideIndex-1].style.display = "block";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+
+    function openBar(openBar) {
+        var i;
+        var x = document.getElementsByClassName("show");
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+	    }
+	    document.getElementById(openBar).style.display = "block";
+    }
+
+    function kaloriKalku()
+        {
+            
+            var umur = document.form1.umur.value;
+            var gender = document.form1.gender.value;
+            var berat = document.form1.beratCal.value;
+            var tinggi = document.form1.tinggiCal.value;
+            var kalori = document.form1.kalori.value;
+            
+            
+            if (gender == "Male"){
+                kalori = 66.5 + (13.75 * berat) + (5.003 * tinggi) - (6.676 * umur);
+            }else if (gender == "Female") 
+            {
+                kalori = 655.1 + (9.563 * berat) + (1.850 * tinggi) - (4.676 * umur);
+            }
+
+            var kalori = kalori * 1.5
+            
+            document.form1.umur.value=umur;
+            document.form1.gender.value=gender;
+            document.form1.beratCal.value=berat;
+            document.form1.tinggiCal.value=tinggi;
+            document.form1.kalori.value=kalori;
+        }
+
+	function reset()
+	{
+		document.form1.kalori.value='';
+	}
+
+    function bmiKalku() {
+        var beratBadan = document.form1.beratBMI.value
+        var tinggi = document.form1.tinggiBMI.value
+
+        var tinggiKuadrat = (tinggi / 100 ) * (tinggi / 100)
+        var BMI = beratBadan / tinggiKuadrat
+
+        if (BMI < 18.5) {
+           BMI = "Berat Badan Kurang";
+        } else if (BMI >= 18.5 && BMI <= 22.9) {
+           BMI = "Berat Badan Normal";
+          } else if (BMI > 22.9) {
+            BMI = "Berat Badan Berlebih";
+            }
+
+        document.form1.BMI.value=BMI;
+    }
+
+    function reset() {
+        document.form1.BMI.value='';
+    }
+</script>
+
+</html>
